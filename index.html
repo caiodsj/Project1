@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camp.in</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="./images/favicon.ico">
+</head>
+<body>
+    <div class="form">
+        <div id="logo"><img src="./images/logo.svg" alt=""></div>
+        <div class="container">
+            <h1><img src="./images/log-in.svg" alt="">&nbsp;Faça seu login</h1>
+            <p id="p1">Entre com suas informações de cadastro.</p><br>
+                <form method="POST">
+                    <label for="inputmail">E-mail</label><br>
+                    <input type="text" name="" id="inputmail" placeholder="Digite seu e-mail"><br><br>
+                    <label for="inputpassword">Senha</label><br>
+                    <input type="password" id="inputpassword" placeholder="Digite sua senha">
+                    <button type="button" id="eye" onclick="mostrarSenha() "><img src="./images/eye.svg" alt=""></button>
+                </form>
+                <script>
+                    function mostrarSenha(){
+                        var tipo = document.getElementById("inputpassword");
+                        if(tipo.type == "password"){
+                            tipo.type = "text";
+                        }
+                        else{
+                            tipo.type = "password"
+                        }
+                    }
+                </script>
+                <div class="checkbox">
+                    <span><label id="checkbox"><input type="checkbox" name="" id="check">&nbsp;Lembre-me</label></span>
+                    <span><a href="#">Esqueci minha senha</a></span>
+                </div>
+                    <button id="enter">ENTRAR</button>
+                    <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+        </div>
+    </div>
+    <div class="img"><img src="./images/side-image.jpg" alt="" id="img"></div>
+</body>
+</html>
